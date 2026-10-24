@@ -23,7 +23,8 @@
       <div class="hero-orbit"><span>100</span><small>QUESTIONS<br>TO MASTER</small></div>
     </section>
 
-    <nav class="tabs" role="tablist"><button class="tab active" data-tab="review">Review</button><button class="tab" data-tab="quiz">Quizlet</button></nav>
+    <div class="exam-switch" aria-label="Choose exam year"><button class="exam-choice active" data-exam="2025S">2025</button><button class="exam-choice" data-exam="2024S">2024</button><select id="sessionSelect" aria-label="Choose 2024 exam session"><option value="2024S">April 2024</option><option value="2024A">October 2024</option></select></div>
+    <nav class="tabs" role="tablist"><button class="tab active" data-tab="review">Reviewer</button><button class="tab" data-tab="quiz">Quizlet</button></nav>
 
     <section id="reviewPanel" class="panel active-panel">
       <div class="section-heading"><div><p class="eyebrow">ORIGINAL SOURCE</p><h3>Swipe reviewer</h3></div><span class="counter" id="reviewCounter">01 / 35</span></div>
@@ -40,6 +41,6 @@
 
     <footer><span>Built for steady progress</span><span>⌘ <b id="footerProgress">0%</b> reviewed</span></footer>
   </main>
-<script src="assets/official-questions.js?v=5"></script><script src="app.js?v=5"></script>
+<script src="assets/official-questions.js?v=5"></script><script src="assets/questions-2024S.js?v=1"></script><script src="assets/questions-2024A.js?v=1"></script><script src="app.js?v=6"></script>
 </body>
 </html>
