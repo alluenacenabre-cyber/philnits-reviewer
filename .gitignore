@@ -1,0 +1,17 @@
+node_modules/
+_source_extract/
+_converted/
+ocr-output/
+official-ocr/
+pdf_render/
+official-render/
+!assets/official-render/
+!assets/official-render/*.png
+itpec-answer-render/
+eng.traineddata
+itpec-source/
+itpec-2025S-IP.zip
+*.ps1
+*.mjs
+assets/question-data.json
+assets/questions.js

@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#f6f8fc" />
+  <title>Philnits Reviewer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="overrides.css" />
+</head>
+<body>
+  <main class="shell">
+    <header class="topbar">
+      <div class="brand"><span class="brand-mark">P</span><div><p class="eyebrow">PERSONAL STUDY SPACE</p><h1>Philnits <span>Reviewer</span></h1></div></div>
+      <button class="icon-button" id="shuffleAll" title="Shuffle reviewer pages" aria-label="Shuffle reviewer pages">⤨</button>
+    </header>
+
+    <section class="hero">
+      <div><p class="eyebrow accent">READY WHEN YOU ARE</p><h2>Small steps.<br><em>Strong recall.</em></h2><p class="hero-copy">Swipe through the original reviewer pages, then test yourself in focused 20-question rounds.</p></div>
+      <div class="hero-orbit"><span>100</span><small>QUESTIONS<br>TO MASTER</small></div>
+    </section>
+
+    <nav class="tabs" role="tablist"><button class="tab active" data-tab="review">Review</button><button class="tab" data-tab="quiz">Quizlet</button></nav>
+
+    <section id="reviewPanel" class="panel active-panel">
+      <div class="section-heading"><div><p class="eyebrow">ORIGINAL SOURCE</p><h3>Swipe reviewer</h3></div><span class="counter" id="reviewCounter">01 / 35</span></div>
+      <div class="reviewer-wrap"><button class="nav-arrow left" id="prevPage">‹</button><div class="reviewer-card question-card"><div id="reviewQuestion"></div><details class="source-details"><summary>Show original paper image</summary><img id="reviewImage" alt="Original ITPEC paper page" draggable="false"></details></div><button class="nav-arrow right" id="nextPage">›</button></div>
+      <div class="swipe-hint">← swipe or use the arrows →</div>
+      <div class="dots" id="reviewDots"></div>
+    </section>
+
+    <section id="quizPanel" class="panel">
+      <div id="quizStart" class="quiz-start"><div class="quiz-icon">✦</div><p class="eyebrow accent">QUIZLET MODE</p><h3>Make it stick.</h3><p>20 random questions per round. Finish all 100 and the deck reshuffles so every question gets familiar.</p><button class="primary" id="startQuiz">Start a round <span>→</span></button><div class="micro-stats"><span><b id="completedStat">0</b> completed</span><span><b id="bestStat">—</b> best score</span></div></div>
+      <div id="quizPlay" class="hidden"><div class="quiz-top"><span class="pill" id="quizPill">ROUND 01</span><span id="quizProgress">1 / 20</span></div><div class="progress"><span id="quizProgressBar"></span></div><div class="quiz-card"><p class="eyebrow accent" id="quizCategory">QUESTION 01</p><div id="quizQuestion"></div><details class="source-details"><summary>Show original paper image</summary><img id="quizImage" alt="Original ITPEC paper page" /></details><p class="quiz-note">Choose an answer.</p><div class="answer-grid" id="answerGrid"></div><div id="answerFeedback" class="answer-feedback hidden"></div><button class="secondary hidden" id="nextQuestion">Next question <span>→</span></button></div></div>
+      <div id="quizResults" class="hidden results"><div class="result-burst">✦</div><p class="eyebrow accent">ROUND COMPLETE</p><h3 id="resultTitle">Nice work.</h3><div class="score-ring"><strong id="scoreValue">0</strong><span>/ 20</span></div><p id="resultMessage"></p><div id="mistakes" class="mistakes"></div><button class="primary" id="againQuiz">Shuffle and play again <span>↗</span></button><button class="text-button" id="reviewMistakes">Review source pages</button></div>
+    </section>
+
+    <footer><span>Built for steady progress</span><span>⌘ <b id="footerProgress">0%</b> reviewed</span></footer>
+  </main>
+  <script src="assets/official-questions.js"></script><script src="app.js"></script>
+</body>
+</html>
